@@ -1,0 +1,50 @@
+/*===============================
+		RESET
+===============================*/
+	@import "scss/includes";
+	@import "scss/reset";
+/*===============================
+		CUSTOM STYLES
+===============================*/
+
+body{
+	background-image: url(../img/honey.png);
+	@include font($sans-serif);
+}
+
+.wrapper{
+	max-width: $wrap-width;
+	margin: 0 auto;
+	padding: 20px 2%;
+}
+
+/*---------- THE GRID ---------*/
+	@import "scss/the-grid";
+/*-------- THE GRID END -------*/
+
+h1{
+	text-align: center;
+	margin: 10px 0 30px;
+	@include font($lucida);
+	font-weight: normal;
+	font-size: 50px;
+	color: #555;
+}
+
+h1 span{
+	font-weight: bold;
+	color: black;
+}
+
+h2{
+	margin-bottom:10px;
+}
+
+.col-cont{
+	box-shadow: 0 0 2px rgba(0,0,0,.8),
+							0 6px 5px -3px rgba(0,0,0,.5);
+}
+
+/*===============================
+		END CUSTOM STYLES
+===============================*/

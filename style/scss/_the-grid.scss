@@ -1,0 +1,48 @@
+// .grid = wraps all columns
+// .col5 = 5 columns in the grid
+// .col = each column
+// .col-cont = column content wrapper
+
+
+.grid{
+	padding: 0 0 20px percentage($col / 100);
+	margin-left: percentage($col / 100) * -1;
+	width: percentage($col / 100) + 100;
+	.col{
+		padding-right:  percentage($col / 100);
+		float: left;
+		@include border-box;
+	}
+}
+
+// column width = 100% / number of collumns
+@for $i from 1 through 5 {
+	.col#{$i} .col { width: 100% / $i; }
+}
+
+// column content
+.col-cont{
+	padding: $content-pad;
+	background-color: white;
+	@include border-box;
+}
+
+
+// BREAK POINTS
+@media (max-width: 768px){
+	.grid{
+		padding-bottom: 0;
+	}
+
+// looping through grids with columns 3 - 5
+	@for $i from 3 through 5 {
+  	.col#{$i} .col { width: 100%;margin-bottom:20px; }
+	}
+}
+
+@media (max-width: 480px){
+	.col2 .col{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}

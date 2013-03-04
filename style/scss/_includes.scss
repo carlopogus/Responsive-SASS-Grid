@@ -1,0 +1,23 @@
+// FONTS
+$helvetica	: Helvetica;
+$arial		: Arial;
+$verdana	: Verdana;
+$lucida		: 'Lucida Sans Unicode', 'Lucida Grande';
+$sans-serif	: sans-serif;
+
+@mixin font($font){
+	font-family:$font;
+}
+
+// PADDING AND WIDTH FIX
+@mixin border-box{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// WRAPPER WIDTH / COLUMN GUTTER WIDTH
+$wrap-width		: 940px; // wrapper width
+$col-gutter		: 20px; // Column gutter
+$content-pad	: 10px; // Content padding
+$col			: $col-gutter / $wrap-width * 100; // do not touch
